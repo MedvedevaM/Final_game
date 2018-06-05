@@ -1,0 +1,83 @@
+* {
+  cursor: url('../img/cursor.cur'), auto;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.player_body_1,
+.player_body_2,
+.player_body_3,
+.player_body_4,
+.player_head_1,
+.player_head_2,
+.player_head_3,
+.player_head_4 {
+  position: absolute;
+}
+
+.player_body_1 {
+  background-image: url('../img/body_1.png');
+}
+
+.player_body_2 {
+  background-image: url('../img/body_2.png');
+}
+
+.player_body_3{
+  background-image: url('../img/body_3.png');
+}
+
+.player_body_4 {
+  background-image: url('../img/body_4.png');
+}
+
+.player_head_1 {
+  background-image: url('../img/head_1.png');
+}
+
+.player_head_2 {
+  background-image: url('../img/head_2.png');
+}
+
+.player_head_3 {
+  background-image: url('../img/head_3.png');
+}
+
+.player_head_4 {
+  background-image: url('../img/head_4.png');
+}
+
+.player_head_1,
+.player_head_2,
+.player_head_3,
+.player_head_4 {
+  height: 210px;
+  width: 170px;
+  bottom: 315px;
+  z-index: 2;
+}
+
+
+
+.player_body {
+  width: 170px;
+  height: 200px;
+  bottom: 140px;
+  z-index: 1;
+}
+
+.player_legs {
+  width: 185px;
+  height: 100px;
+  bottom: 70px;
+}
+
+.player_head_1,
+.player_legs {
+  margin-left: 5px;
+}
