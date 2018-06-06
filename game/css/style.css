@@ -1,12 +1,47 @@
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url(fonts/gloria_hallelujah/gloriahallelujah.ttf);
+}
+
 * {
   cursor: url('../img/cursor.cur'), auto;
   margin: 0;
   padding: 0;
+  font-family: 'Gloria Hallelujah';
+}
+
+html {
+  font-size: 10px;
 }
 
 main {
   height: 100vh;
   width: 100vw;
+}
+
+.choice_of_player {
+  margin: 0 auto;
+  width: 400px;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.choice_of_head,
+.choice_of_body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  font-size: 4rem;
+  color: #008000;
+}
+
+.controls:hover {
+  color: #004524;
 }
 
 .player_body_1,
@@ -55,20 +90,26 @@ main {
 .player_head_1,
 .player_head_2,
 .player_head_3,
-.player_head_4 {
+.player_head_4,
+.player_head {
   height: 210px;
   width: 170px;
-  bottom: 315px;
   z-index: 2;
 }
 
-
+.player_head_1,
+.player_head_2,
+.player_head_3,
+.player_head_4 {
+  bottom: 315px;
+}
 
 .player_body {
   width: 170px;
   height: 200px;
   bottom: 140px;
   z-index: 1;
+  background-position: -20px -242px;
 }
 
 .player_legs {
@@ -80,4 +121,50 @@ main {
 .player_head_1,
 .player_legs {
   margin-left: 5px;
+}
+
+.users_form {
+  margin-top: 30px;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+
+.users_form input,
+.users_form label,
+.play_button,
+.rating_button,
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #004524;
+}
+
+.users_form input {
+  padding-left: 12px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.users_form input,
+.play_button,
+.rating_button {
+  height: 45px;
+}
+
+.rating_button,
+.play_button {
+  margin-top: 20px;
+  border: none;
+  background-color: #60cc52;
+}
+
+.rating_button:hover,
+.play_button:hover {
+  background-color: #008000;
+}
+
+.users_form input:focus {
+  outline-color: #008000;
 }

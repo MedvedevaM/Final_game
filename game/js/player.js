@@ -6,14 +6,13 @@ class Player {
 
   buildPlayer() {
     let playerHead = document.createElement('div');
-    playerHead.classList.add('player_head_4');
+    playerHead.classList.add('player_head_1');
     playerHead.setAttribute('id', 'playerHead');
     game.appendChild(playerHead);
 
     let playerBody = document.createElement('div');
     playerBody.classList.add('player_body');
     playerBody.classList.add('player_body_4');
-    playerBody.setAttribute('style', 'background-position: -20px -242px;');
     playerBody.setAttribute('id', 'playerBody');
     game.appendChild(playerBody);
 
