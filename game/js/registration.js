@@ -1,7 +1,6 @@
 class Registration {
   constructor() {
     this.name;
-    this.email;
     this.chosenHead;
     this.chosenBody;
   }
@@ -89,7 +88,7 @@ class Registration {
     choiceOfPlayer.appendChild(usersForm);
 
     let usersName = document.createElement('input');
-    // usersName.setAttribute('id', 'usersName');
+    usersName.setAttribute('id', 'usersName');
     usersName.setAttribute('type', 'text');
     let labelForName = document.createElement('label');
     labelForName.setAttribute('for', 'usersName');
@@ -110,5 +109,10 @@ class Registration {
     buttonRating.classList.add('rating_button');
     buttonRating.innerHTML = 'Watch rating';
     usersForm.appendChild(buttonRating);
+  }
+
+  initialize() {
+    this.choosePlayer();
+    this.buildRegistration();
   }
 }
