@@ -12,6 +12,7 @@
 
 html {
   font-size: 10px;
+  background-color: #c4e381;
 }
 
 main {
@@ -54,7 +55,8 @@ h1 {
 .player_head_4,
 .enemy_body,
 .enemy_head,
-.enemy_legs {
+.enemy_legs,
+.enemy_weapon {
   position: absolute;
 }
 
@@ -193,7 +195,7 @@ h1 {
 }
 
 .enemy_legs {
-  right: 88px;
+  right: 119px;
   height: 140px;
   width: 280px;
   z-index: 1;
@@ -203,17 +205,38 @@ h1 {
 .enemy_body {
   right: 0px;
   bottom: 115px;
-  width: 435px;
+  width: 465px;
   height: 240px;
   background-position: -500px -250px;
   z-index: 2;
 }
 
 .enemy_head {
-  right: 120px;
+  right: 155px;
   bottom: 325px;
   height: 240px;
   width: 180px;
   z-index: 3;
   background-position: -32px -205px;
+}
+
+.enemy_weapon {
+  background-image: url('../img/weapons.png');
+  width: 344px;
+  height: 231px;
+  bottom: 130px;
+  right: 375px;
+  z-index: 3;
+}
+
+.enemy_weapon_1 {
+  background-position: 0px 0px;
+}
+
+.enemy_weapon_2 {
+  background-position: 0px -231px;
+}
+
+.enemy_weapon_3 {
+  background-position: 0px -462px;
 }
