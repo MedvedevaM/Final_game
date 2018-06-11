@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url(fonts/gloria_hallelujah/gloriahallelujah.ttf);
+}
+.global_task_wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #c4e381;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.translate_wrap {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.translate_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.english_task {
+  font-family:'Gloria Hallelujah';
+}
+.eng_word {
+  font-family: 'Gloria Hallelujah';
+  font-size: 70px;
+  color: #60cc52;
+}
+.trans_word {
+  width: 1000px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: #a4e3f3;
+}
+.trans_word[type="text"] {
+  font-family:'Gloria Hallelujah';
+  text-align: center;
+  color: #60cc52;
+  font-size: 50px;
+}
+.translation {
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Gloria Hallelujah';
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0,0,0,.1);
+}
