@@ -1,7 +1,11 @@
 class Listen {
   constructor(){}
   createListening() {
-    let mainContent = document.getElementById('game');
+    let mainAppend = document.getElementById('game');
+    let mainContent = document.createElement('div');
+    mainContent.setAttribute('id','component');
+    mainContent.className = 'global_wrap';
+    mainAppend.appendChild(mainContent);
     let form = document.createElement('form');
     form.className = 'enter_word';
     let speakInput = document.createElement('input');
@@ -16,7 +20,7 @@ class Listen {
     let wrapInput = document.createElement('div');
     wrapInput.appendChild(task);
     wrapInput.appendChild(form);
-    wrapInput.className = 'wrapper';
+    wrapInput.className = 'task_wrap';
 
     task.className = 'task';
     task.innerHTML = 'Enter the word you heard';
@@ -45,7 +49,7 @@ class Listen {
     wordInput.setAttribute('virtual-keyboard','');
     wordInput.className = 'insert_word';
     button.setAttribute('id','check');
-    button.className = 'compare_word';
+    button.className = 'submit_task';
     button.setAttribute('type','submit')
 
     let a = document.getElementById('type-word');

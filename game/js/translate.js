@@ -1,33 +1,33 @@
 class Translate {
   constructor(){}
   createTranslation() {
+    let mainAppend = document.getElementById('game');
     let translateTask = document.createElement('div');
-    translateTask.className = 'global_task_wrapper';
-    let appendToGame = document.getElementById('game');
-    appendToGame.appendChild(translateTask);
+    translateTask.className = 'global_wrap';
+    mainAppend.appendChild(translateTask);
     let translateWrap = document.createElement('div');
     translateTask.appendChild(translateWrap);
-    translateWrap.className = 'translate_wrap';
+    translateWrap.className = 'task_wrap';
 
     let taskName = document.createElement('h1');
-    taskName.className = 'english_task';
+    taskName.className = 'task';
     taskName.innerHTML = 'Try translate it';
     translateWrap.appendChild(taskName);
     let translateForm = document.createElement('form');
-    translateForm.className = 'translate_form';
+    translateForm.className = 'task_form';
     translateWrap.appendChild(translateForm);
     let engWord = document.createElement('label');
-    engWord .className = 'eng_word';
+    engWord .className = 'task_random';
     engWord.setAttribute('id','eng');
     translateForm.appendChild(engWord);
     let rusTrans = document.createElement('input');
     rusTrans.setAttribute('id','translate');
     rusTrans.setAttribute('type','text');
     rusTrans.setAttribute('autocomplete','off');
-    rusTrans.className = 'trans_word';
+    rusTrans.className = 'insert_word';
     translateForm.appendChild(rusTrans);
     let transSubmit = document.createElement('button');
-    transSubmit.className = 'translation';
+    transSubmit.className = 'submit_task';
     transSubmit.setAttribute('id','check_translate');
     transSubmit.innerHTML = 'Submit';
     translateForm.appendChild(transSubmit);
