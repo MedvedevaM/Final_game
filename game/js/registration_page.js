@@ -27,7 +27,7 @@
 
     game.innerHTML = '';
 
-    game.setAttribute('style', `background: url(img/backgrounds/background_${Math.ceil(Math.random()*4)}.png) repeat bottom / cover;`);
+    game.setAttribute('style', `background: url(img/backgrounds/background_${Math.ceil(Math.random()*7)}.png) repeat bottom / cover;`);
     player.initialize();
 
     let enemy = new Enemy();

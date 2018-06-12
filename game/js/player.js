@@ -6,6 +6,34 @@ class Player {
   }
 
   buildPlayer() {
+    let playerName = document.createElement('p');
+    playerName.innerHTML = this.name;
+    playerName.classList.add('characters_name');
+    playerName.classList.add('player_name');
+    game.appendChild(playerName);
+
+    let lifeOfPlayer = document.createElement('div');
+    lifeOfPlayer.classList.add('quantity_of_lost_life');
+    lifeOfPlayer.classList.add('quantity_of_lost_life_of_player');
+    lifeOfPlayer.innerHTML = '100/100';
+    game.appendChild(lifeOfPlayer);
+
+    // let life = 100;
+    // let currentPosition = 0;
+    // function changeLostLife() {
+    //
+    //   life -= 10;
+    //   currentPosition -= 35;
+    //   if (life < 0) {
+    //     lifeOfPlayer.setAttribute('style', `background-position:  0px -11px;`);
+    //     life = 100;
+    //     currentPosition = 0;
+    //   } else {
+    //     lifeOfPlayer.setAttribute('style', `background-position: ${currentPosition}px -11px;`);
+    //     lifeOfPlayer.innerHTML = `${life}/100`;
+    //   }
+    // }
+
     let playerHead = document.createElement('div');
     playerHead.classList.add(`player_head_${this.head}`);
     playerHead.setAttribute('id', 'playerHead');
@@ -25,12 +53,12 @@ class Player {
     game.appendChild(playerLegs);
 
     function animatePlayer() {
-      if (playerBody.style.bottom === '140px') {
-        playerHead.style.bottom = '310px';
-        playerBody.style.bottom = '135px';
+      if (playerBody.style.bottom === '137px') {
+        playerHead.style.bottom = '307px';
+        playerBody.style.bottom = '132px';
       } else {
-        playerHead.style.bottom = '315px';
-        playerBody.style.bottom = '140px';
+        playerHead.style.bottom = '312px';
+        playerBody.style.bottom = '137px';
       }
     }
     setInterval(animatePlayer, 500);
@@ -46,7 +74,7 @@ class Player {
         }
         playerBody.setAttribute('style', 'background-position: -215px -242px;');
         playerHead.setAttribute('style', 'background-position: -170px 0px;');
-        playerLegs.setAttribute('style', 'background-position: -420px -110px;');
+        playerLegs.setAttribute('style', 'background-position: -415px -110px;');
       } else if (destination === 'forward') {
         if (currentPosition <= window.innerWidth - 250) {
           currentPosition += step;
@@ -69,20 +97,43 @@ class Player {
       playerLegs.style.left = `${currentPosition}px`;
     }
 
+
+    // function animateLegs() {
+    //   if (playerBody.style.backgroundPosition === '-215px -242px') {
+    //     if (playerLegs.style.backgroundPosition === '-415px -110px') {
+    //       playerLegs.setAttribute('style', 'background-position: -210px -115px;');
+    //     } else {
+    //       playerLegs.setAttribute('style', 'background-position: -415px -110px;');
+    //     }
+    //   }
+    //   if (playerBody.style.backgroundPosition === '-20px -242px') {
+    //     if (playerLegs.style.backgroundPosition === '-210px -5px') {
+    //       playerLegs.setAttribute('style', 'background-position: -406px -5px;');
+    //     } else {
+    //       playerLegs.setAttribute('style', 'background-position: -210px -5px;');
+    //     }
+    //   }
+    //   playerLegs.style.left = `${currentPosition}px`;
+    // }
+
     document.onkeydown = function (event) {
       if (event.keyCode === 39) {
         movePlayer('forward');
       } else if (event.keyCode === 37) {
         movePlayer('back');
       }
+      // setInterval(animateLegs, 100);
     }
 
     document.onkeyup = function (event) {
       if (event.keyCode === 39) {
         changeDestinationOfBody('forward');
+
       } else if (event.keyCode === 37) {
         changeDestinationOfBody('back');
+
       }
+
     }
   }
 
