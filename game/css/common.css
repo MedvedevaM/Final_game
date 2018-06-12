@@ -46,19 +46,12 @@
   top: 0;
   left: 0;
   background: #c4e381;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 .global_wrap, .task_wrap, .virtual-keyboard-hook {
   justify-content: center;
 }
 .task_wrap {
-  /* display: flex; */
-  /* align-items: center; */
-  /* align-content: center; */
   flex-direction: column;
-  /* justify-content: center; */
 }
 .task_wrap, .virtual-keyboard-hook {
   align-content: center;
@@ -78,22 +71,6 @@
 .congrats-text {
   font-size: 5rem;
 }
-/* .listen_word {
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  font-family: 'Gloria Hallelujah';
-  font-size: 11px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-  box-shadow: 0 8px 15px rgba(0,0,0,.1);
-} */
 .submit_task, .listen_word {
   width: 140px;
   height: 45px;
@@ -121,17 +98,11 @@
   font-size: 5rem;
 }
 .virtual-keyboard-hook {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* align-content: center; */
   font-size: 7rem;
   color: #a4e3f3;
 }
 .task_form {
-  /* display: flex; */
   flex-direction: column;
-  /* align-items: center; */
 }
 .task_random {
   font-size: 5rem;
@@ -139,6 +110,5 @@
 }
 .flex {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }

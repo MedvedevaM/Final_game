@@ -14,7 +14,11 @@ class Congratulation {
     text.className = 'congrats-text';
     text.innerHTML = 'Congratulations!!!';
     block.appendChild(text);
+
+    setTimeout(function(){
+      animWrap.style.display = "none";
+    }, 5000);
   }
 }
-// let a = new Congratulation();
-// a.createCongratulations();
+// let comeon = new Congratulation();
+// comeon.createCongratulations();
