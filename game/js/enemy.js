@@ -23,19 +23,6 @@ class Enemy {
     lifeOfEnemy.innerHTML = '100/100';
     game.appendChild(lifeOfEnemy);
 
-    // let life = 100;
-    // let currentPosition = 0;
-    // function changeLostLife() {
-    //   currentPosition -= 35;
-    //   if (life < 0) {
-    //     lifeOfPlayer.setAttribute('style', `background-position:  0px -11px;`);
-    //     currentPosition = 0;
-    //   } else {
-    //     lifeOfPlayer.setAttribute('style', `background-position: ${currentPosition}px -11px;`);
-    //     lifeOfPlayer.innerHTML = `${life}/100`;
-    //   }
-    // }
-
     let enemyHead = document.createElement('div');
     enemyHead.classList.add('enemy_head');
     enemyHead.classList.add(`enemy_body_${this.head}`);

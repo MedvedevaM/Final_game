@@ -17,7 +17,7 @@ class Congratulation {
 
     setTimeout(function(){
       animWrap.style.display = "none";
-    }, 5000);
+    }, 3000);
   }
 }
 // let comeon = new Congratulation();

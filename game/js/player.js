@@ -19,22 +19,6 @@ class Player {
     lifeOfPlayer.innerHTML = '100/100';
     game.appendChild(lifeOfPlayer);
 
-    // let life = 100;
-    // let currentPosition = 0;
-    // function changeLostLife() {
-    //
-    //   life -= 10;
-    //   currentPosition -= 35;
-    //   if (life < 0) {
-    //     lifeOfPlayer.setAttribute('style', `background-position:  0px -11px;`);
-    //     life = 100;
-    //     currentPosition = 0;
-    //   } else {
-    //     lifeOfPlayer.setAttribute('style', `background-position: ${currentPosition}px -11px;`);
-    //     lifeOfPlayer.innerHTML = `${life}/100`;
-    //   }
-    // }
-
     let playerHead = document.createElement('div');
     playerHead.classList.add(`player_head_${this.head}`);
     playerHead.setAttribute('id', 'playerHead');

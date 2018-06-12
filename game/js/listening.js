@@ -73,6 +73,7 @@ class ListeningTask {
         lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
         lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
       }
+      game.removeChild(component);
     }
   }
 }

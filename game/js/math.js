@@ -43,6 +43,7 @@ class MathTask {
   }
   let appendToMain = document.getElementById('game');
   let mathGlobalWrap = document.createElement('div');
+  mathGlobalWrap.id = 'task';
   let mathWrap = document.createElement('div');
   let mathForm = document.createElement('form');
   let mathCondition = document.createElement('label');
@@ -68,7 +69,7 @@ class MathTask {
 
   mathSubmit.className = 'submit_task';
   mathSubmit.setAttribute('id','check_answer');
-  mathSubmit.innerHTML = 'Submit';
+  mathSubmit.innerHTML = 'Answer';
 
 
   // appendToMain.appendChild(mathGlobalWrap);
@@ -96,6 +97,7 @@ class MathTask {
       lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
       lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
     }
+    game.removeChild(task);
   }
   }
 }

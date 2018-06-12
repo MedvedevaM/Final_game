@@ -3,8 +3,11 @@ class DragNDropTask {
     this.word = vocabulary[Math.floor(Math.random()*(vocabulary.length))].word;
   }
   buildTask() {
-    let containerOfWord = document.createElement('div');
-    game.appendChild(containerOfWord);
+    let task = document.createElement('div');
+    task.id = 'task';
+    task.classList.add('global_wrap');
+    game.appendChild(task);
+
 
     let shuffledWord = '';
     function shuffle(wordToShuffle) {
@@ -29,7 +32,7 @@ class DragNDropTask {
     let listOfMixedLetters = document.createElement('ul');
     listOfMixedLetters.setAttribute('id', 'listOfMixedLetters');
     listOfMixedLetters.classList.add('listOfMixedLetters');
-    containerOfWord.appendChild(listOfMixedLetters);
+    task.appendChild(listOfMixedLetters);
 
 
     let shuffledWordLength = shuffledWord.length;
@@ -45,7 +48,10 @@ class DragNDropTask {
       });
 
     let button = document.createElement('button');
-    game.appendChild(button);
+    button.setAttribute('value', 'submit');
+    button.innerHTML = 'answer';
+    button.classList.add('submit_task');
+    task.appendChild(button);
 
     let word = this.word;
     console.log(word);
@@ -67,6 +73,7 @@ class DragNDropTask {
         lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
         lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
       }
+      game.removeChild(task);
     }
   }
 }

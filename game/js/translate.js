@@ -4,6 +4,7 @@ class TranslateTask {
     let mainAppend = document.getElementById('game');
     let translateTask = document.createElement('div');
     translateTask.className = 'flex global_wrap';
+    translateTask.id = 'task';
     mainAppend.appendChild(translateTask);
     let translateWrap = document.createElement('div');
     translateTask.appendChild(translateWrap);
@@ -29,7 +30,7 @@ class TranslateTask {
     let transSubmit = document.createElement('button');
     transSubmit.className = 'submit_task';
     transSubmit.setAttribute('id','check_translate');
-    transSubmit.innerHTML = 'Submit';
+    transSubmit.innerHTML = 'Answer';
     translateForm.appendChild(transSubmit);
     let cashIndex = Math.floor(Math.random()*vocabulary.length);
     let engInput = vocabulary[cashIndex].word;
@@ -52,6 +53,7 @@ class TranslateTask {
         lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
         lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
       }
+      game.removeChild(task);
     }
   }
 }
