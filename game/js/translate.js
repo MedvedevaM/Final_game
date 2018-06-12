@@ -3,18 +3,18 @@ class TranslateTask {
   createTranslation() {
     let mainAppend = document.getElementById('game');
     let translateTask = document.createElement('div');
-    translateTask.className = 'global_wrap';
+    translateTask.className = 'flex global_wrap';
     mainAppend.appendChild(translateTask);
     let translateWrap = document.createElement('div');
     translateTask.appendChild(translateWrap);
-    translateWrap.className = 'task_wrap';
+    translateWrap.className = 'flex task_wrap';
 
     let taskName = document.createElement('h1');
     taskName.className = 'task';
     taskName.innerHTML = 'Try translate it';
     translateWrap.appendChild(taskName);
     let translateForm = document.createElement('form');
-    translateForm.className = 'task_form';
+    translateForm.className = 'flex task_form';
     translateWrap.appendChild(translateForm);
     let engWord = document.createElement('label');
     engWord .className = 'task_random';
@@ -54,9 +54,6 @@ class TranslateTask {
       }
     }
   }
-  init() {
-    this.createTranslation();
-  }
 }
-// let a = new Translate();
-// a.init();
+// let a = new TranslateTask();
+// a.createTranslation();
