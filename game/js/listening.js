@@ -6,10 +6,10 @@ class ListeningTask {
     let mainAppend = document.getElementById('game');
     let mainContent = document.createElement('div');
     mainContent.setAttribute('id','component');
-    mainContent.className = 'global_wrap';
+    mainContent.className = 'flex global_wrap';
     mainAppend.appendChild(mainContent);
     let form = document.createElement('form');
-    form.className = 'enter_word';
+    form.className = 'flex task_form';
     let speakInput = document.createElement('input');
     let wordInput = document.createElement('input');
     let button = document.createElement('button');
@@ -20,7 +20,7 @@ class ListeningTask {
     let wrapInput = document.createElement('div');
     wrapInput.appendChild(task);
     wrapInput.appendChild(form);
-    wrapInput.className = 'task_wrap';
+    wrapInput.className = 'flex task_wrap';
 
     task.className = 'task';
     task.innerHTML = 'Enter the word you heard';
@@ -30,7 +30,7 @@ class ListeningTask {
     speakInput.setAttribute('type','button');
     speakInput.setAttribute('value','Listen');
     keybordButton.appendChild(iconKeyboard);
-    keybordButton.className = 'virtual-keyboard-hook';
+    keybordButton.className = 'flex virtual-keyboard-hook';
     keybordButton.setAttribute('data-target-id','type-word');
     keybordButton.setAttribute('data-keyboard-mapping','qwerty');
     iconKeyboard.className = 'fa fa-keyboard-o';
@@ -69,9 +69,6 @@ class ListeningTask {
       }
     }
   }
-  init() {
-    this.createListening();
-  }
 }
-// let a = new Listen();
-// a.init();
+// let a = new ListeningTask();
+// a.createListening();

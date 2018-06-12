@@ -50,15 +50,15 @@ class MathTask {
   let mathSubmit = document.createElement('button');
   let mathTask = document.createElement('h1');
   appendToMain.appendChild(mathGlobalWrap);
-  mathGlobalWrap.className = 'global_wrap';
+  mathGlobalWrap.className = 'flex global_wrap';
   mathTask.className = 'task';
   mathTask.innerHTML= "Try to solve it";
   mathWrap.appendChild(mathTask);
 
-  mathWrap.className = 'task_wrap';
-  mathForm.className = 'task_form';
+  mathWrap.className = 'flex task_wrap';
+  mathForm.className = 'flex task_form';
 
-  mathCondition.className = 'task_random';
+  mathCondition.className = 'flex task_random';
   mathCondition.setAttribute('id','math');
 
   mathSolve.setAttribute('id','ans');
@@ -93,11 +93,7 @@ class MathTask {
       alert('foo');
     }
   }
-}
-  init() {
-    this.buildMathTask();
   }
 }
-
- // let a = new Mathematic();
- // a.init();
+ // let a = new MathTask();
+ // a.buildMathTask();

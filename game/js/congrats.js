@@ -5,9 +5,9 @@ class Congratulation {
     let animWrap = document.createElement('div');
     let text = document.createElement('p');
     let block = document.createElement('div');
-    animWrap.className = 'global_wrap';
+    animWrap.className = 'flex global_wrap';
     block.setAttribute('id','anim');
-    block.className = 'slide task_wrap';
+    block.className = 'flex slide task_wrap';
     mainAppend.appendChild(animWrap);
     // document.body.appendChild(animWrap);
     animWrap.appendChild(block);
@@ -15,9 +15,6 @@ class Congratulation {
     text.innerHTML = 'Congratulations!!!';
     block.appendChild(text);
   }
-  init() {
-   this.createCongratulations();
-  }
 }
 // let a = new Congratulation();
-// a.init();
+// a.createCongratulations();
