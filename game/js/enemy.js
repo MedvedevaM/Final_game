@@ -17,6 +17,7 @@ class Enemy {
     game.appendChild(enemyName);
 
     let lifeOfEnemy = document.createElement('div');
+    lifeOfEnemy.id = 'lifeOfEnemy';
     lifeOfEnemy.classList.add('quantity_of_lost_life');
     lifeOfEnemy.classList.add('quantity_of_lost_life_of_enemy');
     lifeOfEnemy.innerHTML = '100/100';
@@ -25,12 +26,9 @@ class Enemy {
     // let life = 100;
     // let currentPosition = 0;
     // function changeLostLife() {
-    //
-    //   life -= 10;
     //   currentPosition -= 35;
     //   if (life < 0) {
     //     lifeOfPlayer.setAttribute('style', `background-position:  0px -11px;`);
-    //     life = 100;
     //     currentPosition = 0;
     //   } else {
     //     lifeOfPlayer.setAttribute('style', `background-position: ${currentPosition}px -11px;`);
