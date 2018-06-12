@@ -1,0 +1,40 @@
+html,body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.flex_container{
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center
+}
+.skill {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+.first_spell:before {
+  content: "\f1e2";
+}
+.second_spell:before {
+  content: "\f0e7";
+}
+.third_spell:before {
+  content: "\f06d";
+}
+.four_spell:before {
+  content: "\f219";
+}
+.skill:before {
+  display: inline-block;
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 5rem;
+}
