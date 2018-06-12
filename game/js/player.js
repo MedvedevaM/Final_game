@@ -13,6 +13,7 @@ class Player {
     game.appendChild(playerName);
 
     let lifeOfPlayer = document.createElement('div');
+    lifeOfPlayer.id = 'lifeOfPlayer';
     lifeOfPlayer.classList.add('quantity_of_lost_life');
     lifeOfPlayer.classList.add('quantity_of_lost_life_of_player');
     lifeOfPlayer.innerHTML = '100/100';
@@ -76,7 +77,11 @@ class Player {
         playerHead.setAttribute('style', 'background-position: -170px 0px;');
         playerLegs.setAttribute('style', 'background-position: -415px -110px;');
       } else if (destination === 'forward') {
-        if (currentPosition <= window.innerWidth - 250) {
+        if (enemyBody.style.display !== 'none') {
+          if (currentPosition <= window.innerWidth - 800) {
+            currentPosition += step;
+          }
+        } else if (currentPosition <= window.innerWidth - 250) {
           currentPosition += step;
         }
         playerBody.setAttribute('style', 'background-position: -20px -242px;');

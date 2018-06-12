@@ -88,9 +88,13 @@ class MathTask {
     if(inp.value==correctAns) {
       let congrats = new Congratulation();
       congrats.createCongratulations();
-    }
-    else {
-      alert('foo');
+      let lostLifeArr = lifeOfEnemy.innerHTML.split(/\//g);
+      lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 10}/100`;
+      lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 10)) * 3.5)}px -57px;`);
+    } else {
+      let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
+      lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
+      lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
     }
   }
 }

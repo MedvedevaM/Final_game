@@ -59,8 +59,13 @@ class DragNDropTask {
       if (word === str) {
         let congrats = new Congratulation();
         congrats.createCongratulations();
+        let lostLifeArr = lifeOfEnemy.innerHTML.split(/\//g);
+        lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 10}/100`;
+        lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 10)) * 3.5)}px -57px;`);
       } else {
-        console.log('не получилось')
+        let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
+        lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
+        lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
       }
     }
   }
