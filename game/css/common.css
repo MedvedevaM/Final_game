@@ -48,13 +48,13 @@
   background: #c4e381;
   z-index: 50;
 }
-.global_wrap, .task_wrap, .virtual-keyboard-hook, .listOfMixedLetters {
+.global_wrap, .task_wrap, .virtual-keyboard-hook, .listOfMixedLetters, .grid {
   justify-content: center;
 }
 .task_wrap {
   flex-direction: column;
 }
-.task_wrap, .virtual-keyboard-hook, .listOfMixedLetters {
+.task_wrap, .virtual-keyboard-hook, .listOfMixedLetters, .grid {
   align-content: center;
 }
 .slide {
@@ -72,8 +72,13 @@
 }
 .congrats-text {
   font-size: 5rem;
+}
+
+.listOfMixedLetters li,
+.congrats-text {
   color: #004524;
 }
+
 .submit_task, .listen_word {
   width: 140px;
   height: 45px;
@@ -118,16 +123,23 @@
 }
 
 .listOfMixedLetters {
+  margin: 40px;
   list-style-type: none;
 }
 
 .listOfMixedLetters li {
-  background-color: #c4e381;
-  width: 40px;
-  height: 40px;
-  padding-top: 5px;
-  box-sizing: border-box;
-  /* text-align: center; */
+  background-color: #60cc52;
+  width: 60px;
+  height: 60px;
+  text-align: center;
   margin: 10px;
-  font-size: 25px;
+  font-size: 3rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.drag_n_drop_button {
+  margin: 0 auto;
 }

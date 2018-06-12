@@ -6,6 +6,7 @@ class DragNDropTask {
     let task = document.createElement('div');
     task.id = 'task';
     task.classList.add('global_wrap');
+    task.classList.add('grid');
     game.appendChild(task);
 
 
@@ -22,11 +23,9 @@ class DragNDropTask {
     };
 
     shuffle(this.word);
-    console.log(shuffledWord);
     while (shuffledWord === this.word) {
       shuffledWord = '';
       shuffle(this.word);
-      console.log(shuffledWord);
     }
 
     let listOfMixedLetters = document.createElement('ul');
@@ -51,10 +50,10 @@ class DragNDropTask {
     button.setAttribute('value', 'submit');
     button.innerHTML = 'answer';
     button.classList.add('submit_task');
+    button.classList.add('drag_n_drop_button');
     task.appendChild(button);
 
     let word = this.word;
-    console.log(word);
     button.onclick = function () {
       event.preventDefault();
       let arr = Array.from(document.getElementsByTagName('li'));
