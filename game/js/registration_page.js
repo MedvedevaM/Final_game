@@ -33,6 +33,8 @@
     let enemy = new Enemy();
     enemy.initialize();
 
+    let skills = new Skills();
+    skills.buildSkills();
 
     // restart.onclick = function () {
     //   if (!game.lost) {
@@ -46,8 +48,5 @@
     //   game.begin();
     // }
   }
-  // game.setAttribute('style', 'background: url(img/backgrounds/background_1.png) repeat bottom / cover;');
-  // // //
-  // let player = new Player;
-  // player.initialize();
+
 })();

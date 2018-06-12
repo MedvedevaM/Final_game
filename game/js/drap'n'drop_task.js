@@ -50,14 +50,15 @@ class DragNDropTask {
     let word = this.word;
     console.log(word);
     button.onclick = function () {
+      event.preventDefault();
       let arr = Array.from(document.getElementsByTagName('li'));
-
       let str = '';
       for (let i = 0; i < arr.length; i++) {
         str += arr[i].innerHTML;
       }
       if (word === str) {
-        console.log('получилось')
+        let congrats = new Congratulation();
+        congrats.createCongratulations();
       } else {
         console.log('не получилось')
       }

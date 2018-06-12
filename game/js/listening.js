@@ -1,5 +1,7 @@
-class Listen {
-  constructor(){}
+class ListeningTask {
+  constructor(){
+    this.word = vocabulary[Math.floor(Math.random()*(vocabulary.length))].word.toUpperCase();
+  }
   createListening() {
     let mainAppend = document.getElementById('game');
     let mainContent = document.createElement('div');
@@ -11,8 +13,6 @@ class Listen {
     let speakInput = document.createElement('input');
     let wordInput = document.createElement('input');
     let button = document.createElement('button');
-    let myArray = ["APPLES","BANANAS","PEARS"];
-    let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
     let keybordButton = document.createElement('div');
     let iconKeyboard = document.createElement('i');
     let popup = document.createElement('div');
@@ -28,7 +28,7 @@ class Listen {
     speakInput.setAttribute('id','speak');
     speakInput.className = 'listen_word';
     speakInput.setAttribute('type','button');
-    speakInput.setAttribute('value','Play');
+    speakInput.setAttribute('value','Listen');
     keybordButton.appendChild(iconKeyboard);
     keybordButton.className = 'virtual-keyboard-hook';
     keybordButton.setAttribute('data-target-id','type-word');
@@ -54,17 +54,18 @@ class Listen {
 
     let a = document.getElementById('type-word');
 
+    let word = this.word;
     speak.onclick = function(event) {
-      responsiveVoice.speak(randomItem);
+      responsiveVoice.speak(word);
     }
     check.onclick = function (event) {
-      event.stopPropagation();
-    let text = document.getElementById('type-word').value.toUpperCase();
-    if(myArray.indexOf(text)!=-1) {
-      alert('congratulate');
-    }
-    else {
-        alert('Try again');
+      event.preventDefault();
+      let text = document.getElementById('type-word').value.toUpperCase();
+      if (word === text) {
+        let congrats = new Congratulation();
+        congrats.createCongratulations();
+      } else {
+          alert('Try again');
       }
     }
   }

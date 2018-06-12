@@ -1,4 +1,4 @@
-class Translate {
+class TranslateTask {
   constructor(){}
   createTranslation() {
     let mainAppend = document.getElementById('game');
@@ -39,9 +39,11 @@ class Translate {
 
     let button = document.getElementById('check_translate');
     button.onclick = function(event) {
+      event.preventDefault();
       let input = document.getElementById('translate').value;
       if(translate.indexOf(input)!=-1) {
-      alert('ypa');
+        let congrats = new Congratulation();
+        congrats.createCongratulations();
       }
       else {
       alert('foo');

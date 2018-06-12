@@ -1,4 +1,4 @@
-class Mathematic {
+class MathTask {
   constructor(){}
   buildMathTask() {
     let maxNum = 12,
@@ -83,9 +83,11 @@ class Mathematic {
   let button = document.getElementById('check_answer');
 
   button.onclick = function(event) {
+    event.preventDefault();
     let inp = document.getElementById('ans');
     if(inp.value==correctAns) {
-      alert('yeah');
+      let congrats = new Congratulation();
+      congrats.createCongratulations();
     }
     else {
       alert('foo');
