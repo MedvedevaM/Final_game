@@ -1,15 +1,15 @@
 class Congratulation {
   constructor(){}
   createCongratulations() {
+    let mainAppend = document.getElementById('game');
     let animWrap = document.createElement('div');
     let text = document.createElement('p');
     let block = document.createElement('div');
-    let appendCongrats = document.getElementById('game');
-    appendCongrats.appendChild(animWrap);
-    animWrap.className = 'slide_wrapper';
+    animWrap.className = 'global_wrap';
     block.setAttribute('id','anim');
-    block.className = 'slide_right'
-
+    block.className = 'slide task_wrap';
+    mainAppend.appendChild(animWrap);
+    // document.body.appendChild(animWrap);
     animWrap.appendChild(block);
     text.className = 'congrats-text';
     text.innerHTML = 'Congratulations!!!';

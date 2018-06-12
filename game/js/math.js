@@ -42,7 +42,6 @@ class Mathematic {
     isCorrect = (correctAns == ans) ? 'Correct! ' : 'Incorrect, ' + prob + ' = ' + correctAns + '.\n';
   }
   let appendToMain = document.getElementById('game');
-
   let mathGlobalWrap = document.createElement('div');
   let mathWrap = document.createElement('div');
   let mathForm = document.createElement('form');
@@ -50,27 +49,29 @@ class Mathematic {
   let mathSolve = document.createElement('input');
   let mathSubmit = document.createElement('button');
   let mathTask = document.createElement('h1');
-  mathGlobalWrap.className = 'math_global_wrap';
-  mathTask.className = 'math_task';
+  appendToMain.appendChild(mathGlobalWrap);
+  mathGlobalWrap.className = 'global_wrap';
+  mathTask.className = 'task';
   mathTask.innerHTML= "Try to solve it";
   mathWrap.appendChild(mathTask);
 
-  mathWrap.className = 'math_wrap';
-  mathForm.className = 'math_form';
+  mathWrap.className = 'task_wrap';
+  mathForm.className = 'task_form';
 
-  mathCondition.className = 'condition';
+  mathCondition.className = 'task_random';
   mathCondition.setAttribute('id','math');
 
   mathSolve.setAttribute('id','ans');
   mathSolve.setAttribute('type','text');
   mathSolve.setAttribute('autocomplete','off');
-  mathSolve.className = 'answer';
+  mathSolve.className = 'insert_word';
 
-  mathSubmit.className = 'button';
+  mathSubmit.className = 'submit_task';
   mathSubmit.setAttribute('id','check_answer');
   mathSubmit.innerHTML = 'Submit';
-  // document.body.appendChild(mathGlobalWrap);
-  appendToMain.appendChild(mathGlobalWrap);
+
+
+  // appendToMain.appendChild(mathGlobalWrap);
   mathGlobalWrap.appendChild(mathWrap);
   mathWrap.appendChild(mathForm);
   mathForm.appendChild(mathCondition);
@@ -96,5 +97,5 @@ class Mathematic {
   }
 }
 
- let a = new Mathematic();
- a.init();
+ // let a = new Mathematic();
+ // a.init();
