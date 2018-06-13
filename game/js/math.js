@@ -86,16 +86,31 @@ class MathTask {
   button.onclick = function(event) {
     event.preventDefault();
     let inp = document.getElementById('ans');
+
+    let enemyAttack = new Attack();
     if(inp.value==correctAns) {
       let congrats = new Congratulation();
       congrats.createCongratulations();
+
+      let attack = new Attack();
+      setTimeout(function () {
+        attack.buidAttack('player');
+      }, 3000);
+
+      setTimeout(function () {
+        enemyAttack.buidAttack('enemy');
+      }, 5000);
+
       let lostLifeArr = lifeOfEnemy.innerHTML.split(/\//g);
-      lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 10}/100`;
-      lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 10)) * 3.5)}px -57px;`);
+      lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 20}/100`;
+      lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 20)) * 3.5)}px -57px;`);
+
     } else {
-      let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
-      lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
-      lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
+      let attack = new Attack();
+      attack.buidAttack('player');
+      setTimeout(function () {
+        enemyAttack.buidAttack('enemy');
+      }, 2000);
     }
     game.removeChild(task);
   }

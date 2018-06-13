@@ -16,7 +16,7 @@ class Congratulation {
     block.appendChild(text);
 
     setTimeout(function(){
-      animWrap.style.display = "none";
+      game.removeChild(animWrap);
     }, 3000);
   }
 }

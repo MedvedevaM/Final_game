@@ -3,6 +3,7 @@ class Player {
     this.name;
     this.head;
     this.body;
+    this.killedEnemies;
   }
 
   buildPlayer() {
@@ -61,11 +62,8 @@ class Player {
         playerHead.setAttribute('style', 'background-position: -170px 0px;');
         playerLegs.setAttribute('style', 'background-position: -415px -110px;');
       } else if (destination === 'forward') {
-        if (enemyBody.style.display !== 'none') {
-          if (currentPosition <= window.innerWidth - 800) {
-            currentPosition += step;
-          }
-        } else if (currentPosition <= window.innerWidth - 250) {
+        let enemyBody = document.getElementById('enemyBody');
+        if (!enemyBody) {
           currentPosition += step;
         }
         playerBody.setAttribute('style', 'background-position: -20px -242px;');
@@ -117,10 +115,8 @@ class Player {
     document.onkeyup = function (event) {
       if (event.keyCode === 39) {
         changeDestinationOfBody('forward');
-
       } else if (event.keyCode === 37) {
         changeDestinationOfBody('back');
-
       }
 
     }
