@@ -143,3 +143,7 @@
 .drag_n_drop_button {
   margin: 0 auto;
 }
+.animal_task {
+  width: 400px;
+  margin: 10px 0 10px 0;
+}
