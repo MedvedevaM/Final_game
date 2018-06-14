@@ -29,10 +29,5 @@ class Game {
     skills.buildSkills();
     skills.addEventsOnSkills();
 
-    // let congratsWindow = document.getElementsByClassName('congrats-text');
-    // if (congratsWindow) {
-    //   enemy.life -= 10;
-    //   console.log(enemy.life);
-    // }
   }
 }

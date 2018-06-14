@@ -46,7 +46,7 @@
   top: 0;
   left: 0;
   background: #c4e381;
-  z-index: 50;
+  z-index: 100;
 }
 .global_wrap, .task_wrap, .virtual-keyboard-hook, .listOfMixedLetters, .grid {
   justify-content: center;
@@ -60,8 +60,8 @@
 .slide {
   animation-name: slideRight;
   -webkit-animation-name: slideRight;
-  animation-duration: 2s;
-  -webkit-animation-duration: 2s;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   -webkit-animation-timing-function: ease-in-out;
   visibility: visible !important;

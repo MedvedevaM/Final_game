@@ -12,7 +12,7 @@ class TranslateTask {
 
     let taskName = document.createElement('h1');
     taskName.className = 'task';
-    taskName.innerHTML = 'Try translate it';
+    taskName.innerHTML = 'Try to translate it';
     translateWrap.appendChild(taskName);
     let translateForm = document.createElement('form');
     translateForm.className = 'flex task_form';
@@ -51,25 +51,32 @@ class TranslateTask {
         let attack = new Attack();
         setTimeout(function () {
           attack.buidAttack('player');
-        }, 3000);
-
-        setTimeout(function () {
-          enemyAttack.buidAttack('enemy');
-        }, 5000);
+        }, 2000);
 
         let lostLifeArr = lifeOfEnemy.innerHTML.split(/\//g);
         lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 20}/100`;
         lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 20)) * 3.5)}px -57px;`);
+
+        if (lostLifeArr[0] - 20 === 0) {
+          let explosion = new Explosion('enemy');
+          setTimeout(function () {
+            explosion.buidExplosion();
+          }, 3000);
+        } else {
+          setTimeout(function () {
+            enemyAttack.buidAttack('enemy');
+          }, 4000);
+        }
       } else {
         let attack = new Attack();
         attack.buidAttack('player');
-        setTimeout(function () {
-          enemyAttack.buidAttack('enemy');
-        }, 2000);
+        if (enemyBody) {
+          setTimeout(function () {
+            enemyAttack.buidAttack('enemy');
+          }, 2000);
+        }
       }
       game.removeChild(task);
     }
   }
 }
-// let a = new TranslateTask();
-// a.createTranslation();

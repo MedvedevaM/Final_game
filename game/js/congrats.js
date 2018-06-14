@@ -17,7 +17,7 @@ class Congratulation {
 
     setTimeout(function(){
       game.removeChild(animWrap);
-    }, 3000);
+    }, 2000);
   }
 }
 // let comeon = new Congratulation();
