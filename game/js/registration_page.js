@@ -1,5 +1,6 @@
-(function () {
-
+class Abat {
+constructor(){}
+inita() {
   let registation = new Registration;
   registation.initialize();
 
@@ -33,6 +34,9 @@
     let new_game = new Game();
     new_game.startGame();
 
+<<<<<<< HEAD
+  }
+=======
     let currentPosition = 20;
     function movePlayer(destination) {
       let step = 10;
@@ -80,6 +84,32 @@
       // setInterval(animateLegs, 100);
     }
 
+<<<<<<< HEAD
+=======
+    // if (player.currentPosition > window.innerWidth - 500) {
+    //   game.innerHTML = '';
+    //
+    //   player.initialize();
+    //   new_game = new Game();
+    //   new_game.startGame();
+    // }
+    //
+    // // let enemyBody = document.getElementById('enemyBody');
+    // let aim = `${window.innerWidth - 500}px`
+    // if (playerBody.style.left == aim) {
+    //   new_game = new Game();
+    //   new_game.startGame();
+    // }
+
+    // let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
+    // console.log('kek');
+    // if (lostLifeArr[0] !== 0 && !) {
+    //   console.log('kek');
+    //   let explosion = new Explosion('player');
+    //   explosion.buidExplosion();
+    // }
+>>>>>>> 4cd128271bc9a8fa4b7167711b6f70e4e10283b2
+>>>>>>> fe701c112c3f0c99f05a88d12f78b99afff84644
 
     // restart.onclick = function () {
     //   if (!game.lost) {
@@ -93,6 +123,7 @@
     //   game.begin();
     // }
   }
+<<<<<<< HEAD
 
   // registation_page.onclick = function (event) {
   //   event.preventDefault();
@@ -102,3 +133,8 @@
   // }
 
 })();
+=======
+}
+let qw = new Abat();
+qw.inita();
+>>>>>>> fe701c112c3f0c99f05a88d12f78b99afff84644
