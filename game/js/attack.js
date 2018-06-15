@@ -47,18 +47,25 @@ class Attack {
       }
 
       if (character === 'enemy') {
-        if (fireAttackWrapperPosition < 50) {
-          clearInterval(moveFireInterval);
-          game.removeChild(fireAttackWrapper);
-          let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
-          lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
-          lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
-        } else {
-          fireAttackWrapperPosition -= 95;
-          fireAttackWrapper.style.left = `${fireAttackWrapperPosition}px`;
+        if (!!enemyBody) {
+          if (fireAttackWrapperPosition < 50) {
+            clearInterval(moveFireInterval);
+            game.removeChild(fireAttackWrapper);
+
+            let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
+            lifeOfPlayer.innerHTML = `${lostLifeArr[0] - 10}/100`;
+            lifeOfPlayer.setAttribute('style', `background-position: -${(100 - (lostLifeArr[0] - 10)) * 3.5}px -11px;`);
+
+            if (lostLifeArr[0] - 10 === 0) {
+              let explosion = new Explosion('player');
+              explosion.buidExplosion();
+            }
+          } else {
+            fireAttackWrapperPosition -= 95;
+            fireAttackWrapper.style.left = `${fireAttackWrapperPosition}px`;
+          }
         }
       }
-
     }
   }
 }

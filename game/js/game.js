@@ -23,16 +23,11 @@ class Game {
     // player.initialize();
 
     let enemy = new Enemy();
-    enemy.initialize();
+    enemy.buildEnemy();
 
     let skills = new Skills();
     skills.buildSkills();
     skills.addEventsOnSkills();
 
-    // let congratsWindow = document.getElementsByClassName('congrats-text');
-    // if (congratsWindow) {
-    //   enemy.life -= 10;
-    //   console.log(enemy.life);
-    // }
   }
 }

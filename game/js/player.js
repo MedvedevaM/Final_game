@@ -3,7 +3,7 @@ class Player {
     this.name;
     this.head;
     this.body;
-    this.killedEnemies;
+    this.killedEnemies = 0;
   }
 
   buildPlayer() {
@@ -51,29 +51,6 @@ class Player {
   }
 
   addMoveability() {
-    let currentPosition = 20;
-    function movePlayer(destination) {
-      let step = 10;
-      if (destination === 'back') {
-        if (currentPosition >= 20) {
-          currentPosition -= step;
-        }
-        playerBody.setAttribute('style', 'background-position: -215px -242px;');
-        playerHead.setAttribute('style', 'background-position: -170px 0px;');
-        playerLegs.setAttribute('style', 'background-position: -415px -110px;');
-      } else if (destination === 'forward') {
-        let enemyBody = document.getElementById('enemyBody');
-        if (!enemyBody) {
-          currentPosition += step;
-        }
-        playerBody.setAttribute('style', 'background-position: -20px -242px;');
-        playerHead.setAttribute('style', 'background-position: 0px 0px;');
-        playerLegs.setAttribute('style', 'background-position: -210px -5px;');
-      }
-      playerBody.style.left = `${currentPosition}px`;
-      playerHead.style.left = `${currentPosition}px`;
-      playerLegs.style.left = `${currentPosition}px`;
-    }
 
     function changeDestinationOfBody(destination) {
       if (destination === 'back') {
@@ -81,7 +58,7 @@ class Player {
       } else if (destination === 'forward') {
         playerLegs.setAttribute('style', 'background-position: -22px -5px;');
       }
-      playerLegs.style.left = `${currentPosition}px`;
+      playerLegs.style.left = playerBody.style.left;
     }
 
 
@@ -103,14 +80,14 @@ class Player {
     //   playerLegs.style.left = `${currentPosition}px`;
     // }
 
-    document.onkeydown = function (event) {
-      if (event.keyCode === 39) {
-        movePlayer('forward');
-      } else if (event.keyCode === 37) {
-        movePlayer('back');
-      }
-      // setInterval(animateLegs, 100);
-    }
+    // document.onkeydown = function (event) {
+    //   if (event.keyCode === 39) {
+    //     movePlayer('forward');
+    //   } else if (event.keyCode === 37) {
+    //     movePlayer('back');
+    //   }
+    //   // setInterval(animateLegs, 100);
+    // }
 
     document.onkeyup = function (event) {
       if (event.keyCode === 39) {

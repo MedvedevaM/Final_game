@@ -167,7 +167,7 @@ h1 {
 
 .player_legs,
 .enemy_legs {
-bottom: 70px;
+  bottom: 70px;
 }
 
 .player_head_1,
@@ -289,7 +289,30 @@ h1 {
   width: 280px;
   height: 240px;
   background-position: -55px 0px;
-  position: absolute;
   bottom: 150px;
-  z-index: 1000;
+}
+
+.explosion_wrapper {
+  background-image: url('../img/explosion.png');
+}
+
+.fire_attack_wrapper,
+.explosion_wrapper {
+  z-index: 50;
+  position: absolute;
+}
+
+.explosion_wrapper {
+  bottom: 50px;
+  height: 480px;
+}
+
+.explosion_player {
+  left: 0px;
+  width: 400px;
+}
+
+.explosion_enemy {
+  right: 0px;
+  width: 435px;
 }

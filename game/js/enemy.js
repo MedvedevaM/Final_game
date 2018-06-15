@@ -41,11 +41,10 @@ class Enemy {
     enemyLegs.setAttribute('id', 'enemyLegs');
     game.appendChild(enemyLegs);
 
-
     let enemyWeapon = document.createElement('div');
     enemyWeapon.classList.add('enemy_weapon');
     enemyWeapon.classList.add(`enemy_weapon_${this.weapon}`);
-    enemyWeapon.setAttribute('id', 'enemyLegs');
+    enemyWeapon.setAttribute('id', 'enemyWeapon');
     game.appendChild(enemyWeapon);
     function animateEnemy() {
       if (enemyHead.style.bottom === '325px') {
@@ -57,10 +56,5 @@ class Enemy {
       }
     }
     setInterval(animateEnemy, 500);
-  }
-
-
-  initialize() {
-    this.buildEnemy();
   }
 }
