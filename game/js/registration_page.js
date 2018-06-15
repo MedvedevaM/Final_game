@@ -1,5 +1,6 @@
-(function () {
-
+class Abat {
+constructor(){}
+inita() {
   let registation = new Registration;
   registation.initialize();
 
@@ -30,7 +31,7 @@
     let new_game = new Game();
     new_game.startGame();
 
-
+  }
 
     // restart.onclick = function () {
     //   if (!game.lost) {
@@ -44,5 +45,6 @@
     //   game.begin();
     // }
   }
-
-})();
+}
+let qw = new Abat();
+qw.inita();

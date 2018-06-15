@@ -147,3 +147,6 @@
   width: 400px;
   margin: 10px 0 10px 0;
 }
+.guess_answer {
+  font-size: 2rem;
+}
