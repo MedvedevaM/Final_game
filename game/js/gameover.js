@@ -14,7 +14,6 @@ class GameOver {
     registationPage.setAttribute('value', 'submit');
     registationPage.innerHTML = 'Registration page';
     registationPage.classList.add('game_over_button');
-    // registationPage.classList.add('drag_n_drop_button');
     wrapper.appendChild(registationPage);
 
     registation_page.onclick = function (event) {
