@@ -57,6 +57,8 @@
         currentPosition = 0;
         game.innerHTML = '';
         player.initialize();
+        player.killedEnemies++;
+        console.log(player.killedEnemies);
         new_game = new Game();
         new_game.startGame();
       }

@@ -42,15 +42,15 @@ class Explosion {
         game.removeChild(enemyBody);
         game.removeChild(enemyLegs);
         game.removeChild(enemyWeapon);
-        setTimeout(function () {
-          let gameover = new GameOver();
-          gameover.init();
-        }, 1000);
       }
       if (character === 'player') {
         game.removeChild(playerHead);
         game.removeChild(playerBody);
         game.removeChild(playerLegs);
+        setTimeout(function () {
+          let gameover = new GameOver();
+          gameover.init();
+        }, 1000);
       }
     }, 2000);
   }

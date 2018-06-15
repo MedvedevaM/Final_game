@@ -9,7 +9,6 @@ class Congratulation {
     block.setAttribute('id','anim');
     block.className = 'flex slide task_wrap';
     mainAppend.appendChild(animWrap);
-    // document.body.appendChild(animWrap);
     animWrap.appendChild(block);
     text.className = 'congrats-text';
     text.innerHTML = 'Congratulations!!!';
@@ -20,5 +19,3 @@ class Congratulation {
     }, 2000);
   }
 }
-// let comeon = new Congratulation();
-// comeon.createCongratulations();

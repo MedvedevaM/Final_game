@@ -41,7 +41,6 @@ class Enemy {
     enemyLegs.setAttribute('id', 'enemyLegs');
     game.appendChild(enemyLegs);
 
-
     let enemyWeapon = document.createElement('div');
     enemyWeapon.classList.add('enemy_weapon');
     enemyWeapon.classList.add(`enemy_weapon_${this.weapon}`);
@@ -57,9 +56,5 @@ class Enemy {
       }
     }
     setInterval(animateEnemy, 500);
-  }
-
-  initialize() {
-    this.buildEnemy();
   }
 }

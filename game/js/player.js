@@ -3,8 +3,7 @@ class Player {
     this.name;
     this.head;
     this.body;
-    this.killedEnemies;
-    this.currentPosition;
+    this.killedEnemies = 0;
   }
 
   buildPlayer() {

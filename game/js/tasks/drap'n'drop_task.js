@@ -10,7 +10,7 @@ class DragNDropTask {
     game.appendChild(task);
 
     let title = document.createElement('h1');
-    title.innerHTML = ''
+    title.innerHTML = 'Restore the mixed word';
     task.appendChild(title);
 
     let shuffledWord = '';

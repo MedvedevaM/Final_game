@@ -23,7 +23,7 @@ class Game {
     // player.initialize();
 
     let enemy = new Enemy();
-    enemy.initialize();
+    enemy.buildEnemy();
 
     let skills = new Skills();
     skills.buildSkills();
