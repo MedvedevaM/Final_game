@@ -40,6 +40,7 @@ class MatchingWords {
     shuffle(this.shuffledArr);
 
     let container = document.createElement('div');
+    container.style.display = 'flex';
     task.appendChild(container);
 
     let listOfWords = document.createElement('ul');

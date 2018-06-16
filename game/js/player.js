@@ -3,7 +3,6 @@ class Player {
     this.name;
     this.head;
     this.body;
-    this.killedEnemies = 0;
   }
 
   buildPlayer() {
@@ -61,41 +60,12 @@ class Player {
       playerLegs.style.left = playerBody.style.left;
     }
 
-
-    // function animateLegs() {
-    //   if (playerBody.style.backgroundPosition === '-215px -242px') {
-    //     if (playerLegs.style.backgroundPosition === '-415px -110px') {
-    //       playerLegs.setAttribute('style', 'background-position: -210px -115px;');
-    //     } else {
-    //       playerLegs.setAttribute('style', 'background-position: -415px -110px;');
-    //     }
-    //   }
-    //   if (playerBody.style.backgroundPosition === '-20px -242px') {
-    //     if (playerLegs.style.backgroundPosition === '-210px -5px') {
-    //       playerLegs.setAttribute('style', 'background-position: -406px -5px;');
-    //     } else {
-    //       playerLegs.setAttribute('style', 'background-position: -210px -5px;');
-    //     }
-    //   }
-    //   playerLegs.style.left = `${currentPosition}px`;
-    // }
-
-    // document.onkeydown = function (event) {
-    //   if (event.keyCode === 39) {
-    //     movePlayer('forward');
-    //   } else if (event.keyCode === 37) {
-    //     movePlayer('back');
-    //   }
-    //   // setInterval(animateLegs, 100);
-    // }
-
     document.onkeyup = function (event) {
       if (event.keyCode === 39) {
         changeDestinationOfBody('forward');
       } else if (event.keyCode === 37) {
         changeDestinationOfBody('back');
       }
-
     }
   }
 

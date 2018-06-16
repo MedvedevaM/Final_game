@@ -20,7 +20,8 @@ main {
   width: 100vw;
 }
 
-.choice_of_player {
+.choice_of_player,
+.game_over_button {
   margin: 0 auto;
   width: 400px;
 }
@@ -69,7 +70,6 @@ h1 {
   text-align: center;
   font-weight: bold;
   box-sizing: border-box;
-  font-family: 'Gloria Hallelujah';
   color: #dcd36a;
 }
 
@@ -99,7 +99,9 @@ h1 {
 .enemy_body,
 .enemy_head,
 .enemy_legs,
-.enemy_weapon {
+.enemy_weapon,
+.popup,
+.cross {
   position: absolute;
 }
 
@@ -186,7 +188,8 @@ h1 {
 .users_form label,
 .play_button,
 .rating_button,
-h1 {
+h1,
+.game_over_button {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -201,19 +204,22 @@ h1 {
 
 .users_form input,
 .play_button,
-.rating_button {
+.rating_button,
+.game_over_button {
   height: 45px;
 }
 
 .rating_button,
-.play_button {
+.play_button,
+.game_over_button {
   margin-top: 20px;
   border: none;
   background-color: #60cc52;
 }
 
 .rating_button:hover,
-.play_button:hover {
+.play_button:hover,
+.game_over_button:hover {
   background-color: #008000;
 }
 
@@ -315,4 +321,45 @@ h1 {
 .explosion_enemy {
   right: 0px;
   width: 435px;
+}
+
+.popup {
+  margin-left: -400px;
+  left: 50%;
+  top: 0px;
+  background-color: #60cc52;
+  padding: 30px 15px 15px;
+  min-width: 800px;
+  min-height: 700px;
+  z-index: 100;
+}
+
+.popup ol {
+  font-size: 2rem;
+  margin-left: 50px;
+}
+
+.popup h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.cross {
+  top: 5px;
+  right: 25px;
+  font-size: 4rem;
+}
+
+ol,
+h2 {
+  color: #004524;
+}
+
+h1.gameover_text {
+  font-size: 8rem;
+}
+
+h2.gameover_text {
+  font-size: 3rem;
+  text-align: center;
 }

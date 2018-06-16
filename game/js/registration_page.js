@@ -1,6 +1,4 @@
-class Abat {
-constructor(){}
-inita() {
+(function () {
   let registation = new Registration;
   registation.initialize();
 
@@ -22,7 +20,10 @@ inita() {
         arrayOfUsers = JSON.parse(localStorage.getItem('arrayOfUsers'));
     }
 
-    arrayOfUsers.push(player.name);
+    let user = {};
+    user.name = player.name;
+    user.killedEnemies = 0;
+    arrayOfUsers.push(user);
     localStorage.setItem("arrayOfUsers", JSON.stringify(arrayOfUsers));
 
     game.innerHTML = '';
@@ -31,12 +32,9 @@ inita() {
     let new_game = new Game();
     new_game.startGame();
 
-<<<<<<< HEAD
-  }
-=======
     let currentPosition = 20;
     function movePlayer(destination) {
-      let step = 10;
+      let step = 15;
       if (destination === 'back') {
         if (currentPosition >= 20) {
           currentPosition -= step;
@@ -61,8 +59,12 @@ inita() {
         currentPosition = 0;
         game.innerHTML = '';
         player.initialize();
-        player.killedEnemies++;
-        console.log(player.killedEnemies);
+
+        user.killedEnemies++;
+        arrayOfUsers = JSON.parse(localStorage.getItem('arrayOfUsers'));
+        arrayOfUsers[arrayOfUsers.length - 1].killedEnemies = user.killedEnemies;
+        localStorage.setItem("arrayOfUsers", JSON.stringify(arrayOfUsers));
+
         new_game = new Game();
         new_game.startGame();
       }
@@ -74,45 +76,6 @@ inita() {
       } else if (event.keyCode === 37) {
         movePlayer('back');
       }
-      // setInterval(animateLegs, 100);
     }
-
-    // if (player.currentPosition > window.innerWidth - 500) {
-    //   game.innerHTML = '';
-    //
-    //   player.initialize();
-    //   new_game = new Game();
-    //   new_game.startGame();
-    // }
-    //
-    // // let enemyBody = document.getElementById('enemyBody');
-    // let aim = `${window.innerWidth - 500}px`
-    // if (playerBody.style.left == aim) {
-    //   new_game = new Game();
-    //   new_game.startGame();
-    // }
-
-    // let lostLifeArr = lifeOfPlayer.innerHTML.split(/\//g);
-    // console.log('kek');
-    // if (lostLifeArr[0] !== 0 && !) {
-    //   console.log('kek');
-    //   let explosion = new Explosion('player');
-    //   explosion.buidExplosion();
-    // }
->>>>>>> 4cd128271bc9a8fa4b7167711b6f70e4e10283b2
-
-    // restart.onclick = function () {
-    //   if (!game.lost) {
-    //     let arrayOfUsers = JSON.parse(localStorage.getItem('arrayOfUsers'));
-    //     arrayOfUsers.push(user);
-    //     localStorage.setItem("arrayOfUsers", JSON.stringify(arrayOfUsers));
-    //   }
-    //   clearInterval(game.interval);
-    //   desk.innerHTML = '';
-    //   game.moves = 0;
-    //   game.begin();
-    // }
   }
-}
-let qw = new Abat();
-qw.inita();
+})();

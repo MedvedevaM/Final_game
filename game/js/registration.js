@@ -109,6 +109,13 @@ class Registration {
     buttonRating.classList.add('rating_button');
     buttonRating.innerHTML = 'Watch rating';
     usersForm.appendChild(buttonRating);
+
+    buttonRating.onclick = function (event) {
+      event.preventDefault();
+      let rating = new Rating;
+      rating.createPopupWindow();
+      rating.createRatingTable();
+    }
   }
 
   initialize() {
