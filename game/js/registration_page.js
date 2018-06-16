@@ -34,7 +34,7 @@
 
     let currentPosition = 20;
     function movePlayer(destination) {
-      let step = 10;
+      let step = 15;
       if (destination === 'back') {
         if (currentPosition >= 20) {
           currentPosition -= step;
@@ -76,7 +76,6 @@
       } else if (event.keyCode === 37) {
         movePlayer('back');
       }
-      // setInterval(animateLegs, 100);
     }
   }
 })();

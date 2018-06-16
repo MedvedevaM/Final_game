@@ -186,7 +186,8 @@ h1 {
 .users_form label,
 .play_button,
 .rating_button,
-h1 {
+h1,
+.game_over_button {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -352,4 +353,13 @@ h1 {
 ol,
 h2 {
   color: #004524;
+}
+
+h1.gameover_text {
+  font-size: 8rem;
+}
+
+h2.gameover_text {
+  font-size: 3rem;
+  text-align: center;
 }
