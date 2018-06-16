@@ -82,34 +82,35 @@ body {
 }
 .wrap_skills {
   background-image: url('../img/board.png');
-  width: 470px;
-  height: 470px;
+  background-position: -11px 0px;
+  width: 465px;
+  height: 465px;
 }
  .skill_1 {
   bottom: 64px;
-  left: 42px;
+  left: 37px;
 }
 .skill_2 {
   bottom: 63px;
-  left: 283px;
+  left: 278px;
 }
 .skill_3 {
   top: 77px;
-  right: 92px;
+  right: 97px;
 }
 .skill_4 {
   top: 183px;
-  left: 64px
+  left: 59px
 }
 .skill_5 {
-  right: 83px;
+  right: 88px;
   top: -145px;
 }
 .skill_6 {
-  right: 209px;
+  right: 214px;
   top: 182px;
 }
  .skill_7 {
-  right: 70px;
+  right: 75px;
   top: 78px;
 }

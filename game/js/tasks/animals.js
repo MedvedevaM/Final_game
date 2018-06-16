@@ -27,7 +27,7 @@ class AnimalTask {
     buttonAnimal.setAttribute('value','submit')
     blockImg.appendChild(buttonAnimal);
 
-    let arrImg = ['elephant','leopard','lion','rabbit','zebra'];
+    let arrImg = ['elephant','leopard','lion','rabbit','zebra', 'bat', 'bear', 'beaver', 'cat', 'chicken', 'cow', 'crab', 'dog', 'goose', 'horse', 'kangaroo', 'koala', 'monkey', 'squirrel', 'tiger', 'wolf'];
     let rand = arrImg[Math.floor(Math.random() * arrImg.length)];
     img.setAttribute('src',`img/${rand}.png`);
 

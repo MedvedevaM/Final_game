@@ -101,7 +101,8 @@ h1 {
 .enemy_legs,
 .enemy_weapon,
 .popup,
-.cross {
+.cross,
+.finish_game_button {
   position: absolute;
 }
 
@@ -183,7 +184,6 @@ h1 {
   grid-row-gap: 10px;
 }
 
-
 .users_form input,
 .users_form label,
 .play_button,
@@ -209,12 +209,31 @@ h1,
   height: 45px;
 }
 
+.finish_game_button,
+.rating_button,
+.play_button,
+.game_over_button {
+  border: none;
+  background-color: #60cc52;
+}
+
 .rating_button,
 .play_button,
 .game_over_button {
   margin-top: 20px;
-  border: none;
-  background-color: #60cc52;
+}
+
+.finish_game_button {
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  font-size: 2rem;
+  background-color: #9f3734;
+  color: #dcd36a;
+}
+
+.finish_game_button:hover {
+  background-color: #972825;
 }
 
 .rating_button:hover,

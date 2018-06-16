@@ -3,6 +3,17 @@ class Game {
   startGame() {
     game.setAttribute('style', `background: url(img/backgrounds/background_${Math.ceil(Math.random()*7)}.png) repeat bottom / cover;`);
 
+    let finishGame = document.createElement('button');
+    finishGame.setAttribute('id', 'finishGame');
+    finishGame.classList.add('finish_game_button');
+    finishGame.innerHTML = 'Finish game';
+    game.appendChild(finishGame);
+
+    finishGame.onclick = function () {
+      let gameover = new GameOver();
+      gameover.init();
+    }
+
     let enemy = new Enemy();
     enemy.buildEnemy();
 

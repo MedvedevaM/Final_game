@@ -9,7 +9,6 @@ class Explosion {
     game.appendChild(explosionWrapper);
 
     let character = this.character;
-    console.log(character)
     if (character === 'player') {
       explosionWrapper.classList.add('explosion_player');
     }
