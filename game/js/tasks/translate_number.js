@@ -12,7 +12,7 @@ class TranslateNumber {
 
     let taskName = document.createElement('h1');
     taskName.className = 'task';
-    taskName.innerHTML = 'Translate the number!!!';
+    taskName.innerHTML = 'Translate the number:';
     translateNumberWrap.appendChild(taskName);
     let translateNumberForm = document.createElement('form');
     translateNumberForm.className = 'flex task_form';
@@ -41,13 +41,51 @@ class TranslateNumber {
     let button = document.getElementById('check_translate');
     button.onclick = function(event) {
       event.preventDefault();
+
+      let enemyAttack = new Attack();
+      let skills = new Skills();
       let input = document.getElementById('translate_number').value;
       if(translate.indexOf(input)!==-1) {
-        alert('y');
+        let congrats = new Congratulation();
+        congrats.createCongratulations();
+
+        let attack = new Attack();
+        setTimeout(function () {
+          attack.buidAttack('player');
+        }, 2000);
+
+        let lostLifeArr = lifeOfEnemy.innerHTML.split(/\//g);
+        lifeOfEnemy.innerHTML = `${lostLifeArr[0] - 20}/100`;
+        lifeOfEnemy.setAttribute('style', `background-position: ${(-368 + (100 - (lostLifeArr[0] - 20)) * 3.5)}px -57px;`);
+
+        if (lostLifeArr[0] - 20 === 0) {
+          let explosion = new Explosion('enemy');
+          setTimeout(function () {
+            explosion.buidExplosion();
+          }, 3000);
+        } else {
+          setTimeout(function () {
+            enemyAttack.buidAttack('enemy');
+          }, 4000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 6000);
+        }
+      } else {
+        let attack = new Attack();
+        attack.buidAttack('player');
+        if (enemyBody) {
+          setTimeout(function () {
+            enemyAttack.buidAttack('enemy');
+          }, 2000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 4000);
+        }
       }
-      else {
-        alert('n');
-      }
+      game.removeChild(task);
     }
   }
 }

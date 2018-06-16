@@ -64,6 +64,7 @@ class ListeningTask {
       let text = document.getElementById('type-word').value.toUpperCase();
 
       let enemyAttack = new Attack();
+      let skills = new Skills();
       if (word === text) {
         let congrats = new Congratulation();
         congrats.createCongratulations();
@@ -86,6 +87,10 @@ class ListeningTask {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 4000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 6000);
         }
       } else {
         let attack = new Attack();
@@ -94,6 +99,10 @@ class ListeningTask {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 2000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 4000);
         }
       }
       game.removeChild(component);
