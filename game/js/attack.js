@@ -36,7 +36,7 @@ class Attack {
     let sound = new Audio();
     function playSound(url){
     sound.pause();
-    sound.currentTime = 1.5;
+    sound.currentTime = 2;
     sound.src = url;
     sound.play();
     }

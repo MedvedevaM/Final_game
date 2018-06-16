@@ -1,4 +1,4 @@
-let numbers = [
+const numbers = [
     {
       onscreen: 2,
       translate: ['two']

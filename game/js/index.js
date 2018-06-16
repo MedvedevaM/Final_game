@@ -1,4 +1,7 @@
-(function () {
+import Registration from './registration';
+import Game from './game';
+import Player from './player';
+$(document).ready(function () {
   let registation = new Registration;
   registation.initialize();
 
@@ -78,4 +81,4 @@
       }
     }
   }
-})();
+});

@@ -1,4 +1,4 @@
-class Registration {
+export default class Registration {
   constructor() {
     this.name;
     this.chosenHead;

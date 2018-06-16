@@ -1,4 +1,4 @@
-class Game {
+export default class Game {
   constructor() {}
   startGame() {
     game.setAttribute('style', `background: url(img/backgrounds/background_${Math.ceil(Math.random()*7)}.png) repeat bottom / cover;`);
