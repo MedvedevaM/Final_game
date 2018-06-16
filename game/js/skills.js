@@ -13,7 +13,7 @@ class Skills {
     wrapperSkills.className = 'flex wrap_skills';
     appendToMain.appendChild(flexWrap);
     flexWrap.appendChild(wrapperSkills);
-    for(let i = 1;i<=8;i++) {
+    for(let i = 1;i<=7;i++) {
       let div = document.createElement('div');
       div.id = `skill_${i}`;
       div.className = `skill skill_${i}`;
@@ -40,5 +40,3 @@ class Skills {
     }
   }
 }
-// let skill = new Skills();
-// skill.buildSkills();

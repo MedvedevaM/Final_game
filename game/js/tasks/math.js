@@ -29,11 +29,11 @@ class MathTask {
     }
     while (stillPlaying) {
       sign = ['+', '\u2212', '\xD7', '\xF7'][randInt(4)];
-      num1 = randInt(maxNum + 1);
-      num2 = randInt(maxNum + 1);
+      num1 = randInt(maxNum + 5);
+      num2 = randInt(maxNum + 5);
       if (sign == '\u2212') num1 += num2;
       if (sign == '\xF7') {
-        num2 = randInt(maxNum) + 1;
+        num2 = randInt(maxNum) + 5;
         num1 *= num2;
       }
       prob = num1 + ' ' + sign + ' ' + num2;
@@ -84,7 +84,6 @@ class MathTask {
     button.onclick = function(event) {
       event.preventDefault();
       let inp = document.getElementById('ans');
-
       let enemyAttack = new Attack();
       if(inp.value==correctAns) {
         let congrats = new Congratulation();

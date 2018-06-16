@@ -10,12 +10,15 @@
 html,body {
   height: 100%;
 }
+
 body {
   margin: 0;
 }
+
 .flex {
   display: flex;
 }
+
 .flex_container{
   height: 100%;
   padding: 0;
@@ -23,6 +26,7 @@ body {
   align-items: center;
   justify-content: center
 }
+
 .skill {
   position: relative;
   width: 100px;
@@ -30,39 +34,46 @@ body {
   text-align: center;
   color: green;
 }
+
 .wrap_skills {
   animation-name: spin;
   animation-duration: 1500ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-out;
 }
+
 .skill:hover {
   color: #07471e;
 }
+
 .skill_1:before {
   content: "\f1e2";
 }
+
 .skill_2:before {
   content: "\f0e7";
 }
+
 .skill_3:before {
   content: "\f12e";
 }
+
 .skill_4:before {
   content: "\f0eb";
 }
+
 .skill_5:before {
   content: "\f0d0";
 }
+
 .skill_6:before {
   content: "\f277";
 }
+
 .skill_7:before {
   content: "\f2d6";
 }
-.skill_8:before {
-  content: "\f0c3";
-}
+
 .skill:before {
   display: inline-block;
   font-family: FontAwesome;
@@ -74,33 +85,31 @@ body {
   width: 470px;
   height: 470px;
 }
-/* .skill_1 {
-  right: -373px;
+ .skill_1 {
+  bottom: 64px;
+  left: 42px;
 }
 .skill_2 {
-  right: -602px;
+  bottom: 63px;
+  left: 283px;
 }
 .skill_3 {
-  right: -340px;
-  top: 187px;
+  top: 77px;
+  right: 92px;
 }
 .skill_4 {
-  right: -238px;
-  top: -136px;
+  top: 183px;
+  left: 64px
 }
 .skill_5 {
-  right: -222px;
-  top: -95px;
+  right: 83px;
+  top: -145px;
 }
 .skill_6 {
-  right: -148px;
-  top: 124px;
+  right: 209px;
+  top: 182px;
 }
  .skill_7 {
-   right: 191px;
-   top: 122px;
+  right: 70px;
+  top: 78px;
 }
-.skill_8 {
-  right: 273px;
-  top: -95px;
-} */
