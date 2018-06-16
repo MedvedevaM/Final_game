@@ -44,6 +44,7 @@ class TranslateTask {
       let input = document.getElementById('translate').value;
 
       let enemyAttack = new Attack();
+      let skills = new Skills();
       if(translate.indexOf(input)!=-1) {
         let congrats = new Congratulation();
         congrats.createCongratulations();
@@ -66,6 +67,10 @@ class TranslateTask {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 4000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 6000);
         }
       } else {
         let attack = new Attack();
@@ -74,6 +79,10 @@ class TranslateTask {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 2000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 4000);
         }
       }
       game.removeChild(task);

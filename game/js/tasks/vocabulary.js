@@ -9,7 +9,7 @@ let vocabulary = [
     },
     {
       word: 'flower',
-      translate: ['цвет', 'цветок']
+      translate: ['цветок', 'цвет']
     },
     {
       word: 'sun',

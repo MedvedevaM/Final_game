@@ -1,5 +1,5 @@
 (function () {
-  let registation = new Registration;
+  let registation = new Registration();
   registation.initialize();
 
   play_game.onclick = function (event) {

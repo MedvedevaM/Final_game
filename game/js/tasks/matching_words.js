@@ -45,7 +45,7 @@ class MatchingWords {
 
     let listOfWords = document.createElement('ul');
     listOfWords.setAttribute('id', 'listOfWords');
-    listOfWords.classList.add('listOfWords');
+    listOfWords.classList.add('listOfWordsToMatch');
     container.appendChild(listOfWords);
 
     for (let i = 0; i < 5; i++) {
@@ -56,7 +56,7 @@ class MatchingWords {
 
     let listOfTranslate = document.createElement('ul');
     listOfTranslate.setAttribute('id', 'listOfTranslate');
-    listOfTranslate.classList.add('listOfWords');
+    listOfTranslate.classList.add('listOfWordsToMatch');
     container.appendChild(listOfTranslate);
 
     for (let i = 0; i < 5; i++) {
@@ -91,6 +91,8 @@ class MatchingWords {
         }
       }
 
+      let enemyAttack = new Attack();
+      let skills = new Skills();
       if (answer) {
         let congrats = new Congratulation();
         congrats.createCongratulations();
@@ -113,6 +115,10 @@ class MatchingWords {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 4000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 6000);
         }
       } else {
         let attack = new Attack();
@@ -121,6 +127,10 @@ class MatchingWords {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 2000);
+          setTimeout(function () {
+            skills.buildSkills();
+            skills.addEventsOnSkills();
+          }, 4000);
         }
       }
       game.removeChild(task);
