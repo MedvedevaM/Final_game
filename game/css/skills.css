@@ -71,10 +71,10 @@ body {
 }
 .wrap_skills {
   background-image: url('../img/board.png');
-  width: 1200px;
-  height: 606px;
+  width: 470px;
+  height: 470px;
 }
-.skill_1 {
+/* .skill_1 {
   right: -373px;
 }
 .skill_2 {
@@ -103,4 +103,4 @@ body {
 .skill_8 {
   right: 273px;
   top: -95px;
-}
+} */
