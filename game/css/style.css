@@ -99,7 +99,9 @@ h1 {
 .enemy_body,
 .enemy_head,
 .enemy_legs,
-.enemy_weapon {
+.enemy_weapon,
+.popup,
+.cross {
   position: absolute;
 }
 
@@ -327,7 +329,6 @@ h1,
   top: 0px;
   background-color: #60cc52;
   padding: 30px 15px 15px;
-  position: absolute;
   min-width: 800px;
   min-height: 700px;
   z-index: 100;
@@ -344,7 +345,6 @@ h1,
 }
 
 .cross {
-  position: absolute;
   top: 5px;
   right: 25px;
   font-size: 4rem;

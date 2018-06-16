@@ -7,7 +7,6 @@ class Attack {
     fireAttackWrapper.id = 'fireAttackWrapper';
     fireAttackWrapper.classList.add('fire_attack_wrapper');
     game.appendChild(fireAttackWrapper);
-    // fireAttackWrapper.style.left = playerHead.style.left;
     let frames = 1;
     let positionY;
     let fireAttackWrapperPosition;
@@ -33,6 +32,15 @@ class Attack {
     }
 
     setInterval(animateFire, 100);
+
+    let sound = new Audio();
+    function playSound(url){
+    sound.pause();
+    sound.currentTime = 1.5;
+    sound.src = url;
+    sound.play();
+    }
+    playSound('audio/Sound_20640.mp3');
 
     let moveFireInterval = setInterval(moveFire, 100);
     function moveFire() {
