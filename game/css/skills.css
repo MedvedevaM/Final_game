@@ -1,3 +1,12 @@
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+
 html,body {
   height: 100%;
 }
@@ -19,22 +28,79 @@ body {
   width: 100px;
   height: 100px;
   text-align: center;
+  color: green;
 }
-.first_spell:before {
+.wrap_skills {
+  animation-name: spin;
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+.skill:hover {
+  color: #07471e;
+}
+.skill_1:before {
   content: "\f1e2";
 }
-.second_spell:before {
+.skill_2:before {
   content: "\f0e7";
 }
-.third_spell:before {
-  content: "\f06d";
+.skill_3:before {
+  content: "\f12e";
 }
-.four_spell:before {
-  content: "\f219";
+.skill_4:before {
+  content: "\f0eb";
+}
+.skill_5:before {
+  content: "\f0d0";
+}
+.skill_6:before {
+  content: "\f277";
+}
+.skill_7:before {
+  content: "\f2d6";
+}
+.skill_8:before {
+  content: "\f0c3";
 }
 .skill:before {
   display: inline-block;
   font-family: FontAwesome;
   position: absolute;
   font-size: 5rem;
+}
+.wrap_skills {
+  background-image: url('../img/board.png');
+  width: 1200px;
+  height: 606px;
+}
+.skill_1 {
+  right: -373px;
+}
+.skill_2 {
+  right: -602px;
+}
+.skill_3 {
+  right: -340px;
+  top: 187px;
+}
+.skill_4 {
+  right: -238px;
+  top: -136px;
+}
+.skill_5 {
+  right: -222px;
+  top: -95px;
+}
+.skill_6 {
+  right: -148px;
+  top: 124px;
+}
+ .skill_7 {
+   right: 191px;
+   top: 122px;
+}
+.skill_8 {
+  right: 273px;
+  top: -95px;
 }

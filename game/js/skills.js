@@ -13,26 +13,13 @@ class Skills {
     wrapperSkills.className = 'flex wrap_skills';
     appendToMain.appendChild(flexWrap);
     flexWrap.appendChild(wrapperSkills);
-    let firstSkill = document.createElement('div');
-
-    let secondSkill = document.createElement('div');
-    let thirdSkill = document.createElement('div');
-    let fourSkill = document.createElement('div');
-    firstSkill.className = "skill first_spell";
-    secondSkill.className = "skill second_spell";
-    thirdSkill.className = "skill third_spell";
-    fourSkill.className = "skill four_spell";
-
-    firstSkill.setAttribute('id','skill_one');
-    secondSkill.setAttribute('id','skill_two');
-    thirdSkill.setAttribute('id','skill_three');
-    fourSkill.setAttribute('id','skill_four');
-    wrapperSkills.appendChild(firstSkill);
-    wrapperSkills.appendChild(secondSkill);
-    wrapperSkills.appendChild(thirdSkill);
-    wrapperSkills.appendChild(fourSkill);
+    for(let i = 1;i<=8;i++) {
+      let div = document.createElement('div');
+      div.id = `skill_${i}`;
+      div.className = `skill skill_${i}`;
+      wrapperSkills.appendChild(div);
+    }
   }
-
   addEventsOnSkills() {
     let task;
     skill_one.onclick = function () {
@@ -53,3 +40,5 @@ class Skills {
     }
   }
 }
+// let skill = new Skills();
+// skill.buildSkills();

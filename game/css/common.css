@@ -150,3 +150,22 @@
 .guess_answer {
   font-size: 2rem;
 }
+.wrap_skills {
+  background-image: url('../img/board.png');
+  width: 1200px;
+  height: 606px;
+}
+.first_spell {
+  right: -366px;
+}
+.second_spell {
+  right: -583px;
+}
+.third_spell {
+  right: -333px;
+  top: 200px;
+}
+.four_spell {
+  right: -222px;
+  top: -136px;
+}
