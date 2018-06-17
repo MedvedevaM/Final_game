@@ -1,5 +1,5 @@
 import Rating from './rating';
-import Registration from './registation';
+import Registration from './registration';
 export default class GameOver {
   constructor() {
   }

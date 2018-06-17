@@ -1,6 +1,6 @@
-import Attack from './attack';
-import Congratulation from './congrats';
-import Explosion from './explosion';
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
 export default class ListeningTask {
   constructor(){
     this.word = vocabulary[Math.floor(Math.random()*(vocabulary.length))].word.toUpperCase();

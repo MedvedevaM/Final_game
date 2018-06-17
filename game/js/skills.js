@@ -1,4 +1,8 @@
-class Skills {
+import DragNDropTask from './tasks/drap_n_drop_task';
+import MathTask from './tasks/math';
+import ListeningTask from './tasks/listening';
+import TranslateTask from './tasks/translate_number';
+export default class Skills {
   constructor() {
 
   }
