@@ -144,6 +144,7 @@ h1, .titles_first{
   display: flex;
   justify-content: space-around;
   padding-top: 50px;
+  align-items: center;
 }
 
 .about{
