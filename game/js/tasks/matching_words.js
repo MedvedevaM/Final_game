@@ -1,4 +1,7 @@
-class MatchingWords {
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
+export default class MatchingWords {
   constructor() {
     this.words = [];
     this.translates = [];

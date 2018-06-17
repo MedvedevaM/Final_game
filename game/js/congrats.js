@@ -1,4 +1,4 @@
-class Congratulation {
+export default class Congratulation {
   constructor(){}
   createCongratulations() {
     let mainAppend = document.getElementById('game');

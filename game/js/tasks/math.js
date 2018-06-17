@@ -1,4 +1,7 @@
-class MathTask {
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
+export default class MathTask {
   constructor(){}
   buildMathTask() {
     let maxNum = 12,

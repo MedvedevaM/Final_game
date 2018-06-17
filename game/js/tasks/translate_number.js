@@ -1,4 +1,7 @@
-class TranslateNumber {
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
+export default class TranslateNumber {
   constructor(){}
   buildTranslateNumber() {
     let mainAppend = document.getElementById('game');

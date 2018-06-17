@@ -1,4 +1,4 @@
-class Rating {
+export default class Rating {
   constructor() {
   }
 

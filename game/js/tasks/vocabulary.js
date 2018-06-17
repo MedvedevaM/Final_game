@@ -1,4 +1,4 @@
-let vocabulary = [
+const vocabulary = [
     {
       word: 'dog',
       translate: ['собака', 'пёс', 'пес', 'собачка']

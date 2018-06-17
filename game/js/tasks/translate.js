@@ -1,4 +1,7 @@
-class TranslateTask {
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
+export default class TranslateTask {
   constructor(){}
   createTranslation() {
     let mainAppend = document.getElementById('game');

@@ -1,4 +1,6 @@
-class Game {
+import Enemy from './enemy';
+import Skills from './skills';
+export default class Game {
   constructor() {}
   startGame() {
     game.setAttribute('style', `background: url(img/backgrounds/background_${Math.ceil(Math.random()*7)}.png) repeat bottom / cover;`);

@@ -1,4 +1,5 @@
-class Explosion {
+import GameOver from './gameover';
+export default class Explosion {
   constructor(character) {
     this.character = character;
   }

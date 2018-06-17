@@ -1,4 +1,7 @@
-class AnimalTask {
+import Attack from './../attack';
+import Congratulation from './../congrats';
+import Explosion from './../explosion';
+export default class AnimalTask {
   constructor() {}
   createAnimalTask() {
     let globalWrap = document.createElement('div');
