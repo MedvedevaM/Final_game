@@ -216,7 +216,7 @@ img {
 }
 
 .screen img:hover{
--webkit-transform: scale(3);
--moz-transform: scale(3);
--o-transform: scale(3);
+-webkit-transform: scale(1.5);
+-moz-transform: scale(1.5);
+-o-transform: scale(1.5);
 }
