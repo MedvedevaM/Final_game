@@ -1,5 +1,6 @@
 import Enemy from './enemy';
 import Skills from './skills';
+import GameOver from './gameover';
 export default class Game {
   constructor() {}
   startGame() {

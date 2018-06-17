@@ -1,6 +1,7 @@
 import Attack from './../attack';
 import Congratulation from './../congrats';
 import Explosion from './../explosion';
+import Skills from './../skills';
 export default class DragNDropTask {
   constructor() {
     this.word = vocabulary[Math.floor(Math.random()*(vocabulary.length))].word;
@@ -92,10 +93,12 @@ export default class DragNDropTask {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 4000);
-          setTimeout(function () {
-            skills.buildSkills();
-            skills.addEventsOnSkills();
-          }, 6000);
+          if (playerBody) {
+            setTimeout(function () {
+              skills.buildSkills();
+              skills.addEventsOnSkills();
+            }, 6000);
+          }
         }
       } else {
         let attack = new Attack();

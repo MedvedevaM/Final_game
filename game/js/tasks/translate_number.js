@@ -1,6 +1,7 @@
 import Attack from './../attack';
 import Congratulation from './../congrats';
 import Explosion from './../explosion';
+import Skills from './../skills';
 export default class TranslateNumber {
   constructor(){}
   buildTranslateNumber() {
@@ -70,10 +71,12 @@ export default class TranslateNumber {
           setTimeout(function () {
             enemyAttack.buidAttack('enemy');
           }, 4000);
-          setTimeout(function () {
-            skills.buildSkills();
-            skills.addEventsOnSkills();
-          }, 6000);
+          if (playerBody) {
+            setTimeout(function () {
+              skills.buildSkills();
+              skills.addEventsOnSkills();
+            }, 6000);
+          }
         }
       } else {
         let attack = new Attack();
@@ -92,5 +95,3 @@ export default class TranslateNumber {
     }
   }
 }
-// let task = new TranslateNumber();
-// task.buildTranslateNumber();

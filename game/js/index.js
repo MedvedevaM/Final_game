@@ -1,20 +1,15 @@
-<<<<<<< HEAD:game/js/registration_page.js
-(function () {
-  let registation = new Registration();
-=======
 import Registration from './registration';
 import Game from './game';
 import Player from './player';
 $(document).ready(function () {
   let registation = new Registration;
->>>>>>> develop:game/js/index.js
   registation.initialize();
 
   play_game.onclick = function (event) {
-    // if (!usersName.value) {
-    //   alert('Please, enter your name!');
-    //   return false;
-    // }
+    if (!usersName.value) {
+      alert('Please, enter your name!');
+      return false;
+    }
 
     event.preventDefault();
 

@@ -1,11 +1,12 @@
 import DragNDropTask from './tasks/drap_n_drop_task';
 import MathTask from './tasks/math';
+import AnimalTask from './tasks/animals';
 import ListeningTask from './tasks/listening';
-import TranslateTask from './tasks/translate_number';
+import TranslateTask from './tasks/translate';
+import MatchingWords from './tasks/matching_words';
+import TranslateNumber from './tasks/translate_number';
 export default class Skills {
-  constructor() {
-
-  }
+  constructor() {}
 
   buildSkills() {
     let appendToMain = document.getElementById('game');
@@ -25,42 +26,44 @@ export default class Skills {
       wrapperSkills.appendChild(div);
     }
   }
+
   addEventsOnSkills() {
-    let task;
-    skill_1.onclick = function () {
-      task = new DragNDropTask();
-      task.buildTask();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_2.onclick = function () {
-      task = new MathTask();
-      task.buildMathTask();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_3.onclick = function () {
-      task = new AnimalTask();
-      task.createAnimalTask();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_4.onclick = function () {
-      task = new ListeningTask();
-      task.createListening();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_5.onclick = function () {
-      task = new TranslateTask();
-      task.createTranslation();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_6.onclick = function () {
-      task = new MatchingWords();
-      task.buildTask();
-      game.removeChild(choiceOfSkills);
-    }
-    skill_7.onclick = function () {
-      task = new TranslateNumber();
-      task.buildTranslateNumber();
-      game.removeChild(choiceOfSkills);
+    skill_board.onclick = function (event) {
+      if (event.target.id === 'skill_1') {
+        let task = new DragNDropTask();
+        task.buildTask();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_2') {
+        let task = new MathTask();
+        task.buildMathTask();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_3') {
+        let task = new AnimalTask();
+        task.createAnimalTask();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_4') {
+        let task = new ListeningTask();
+        task.createListening();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_5') {
+        let task = new TranslateTask();
+        task.createTranslation();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_6') {
+        let task = new MatchingWords();
+        task.buildTask();
+        game.removeChild(choiceOfSkills);
+      }
+      if (event.target.id === 'skill_7') {
+        let task = new TranslateNumber();
+        task.buildTranslateNumber();
+        game.removeChild(choiceOfSkills);
+      }
     }
   }
 }

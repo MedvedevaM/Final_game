@@ -50,7 +50,6 @@ export default class Player {
   }
 
   addMoveability() {
-
     function changeDestinationOfBody(destination) {
       if (destination === 'back') {
         playerLegs.setAttribute('style', 'background-position: -27px -115px;');

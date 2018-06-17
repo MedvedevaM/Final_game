@@ -1,5 +1,5 @@
 export default class Congratulation {
-  constructor(){}
+  constructor() {}
   createCongratulations() {
     let mainAppend = document.getElementById('game');
     let animWrap = document.createElement('div');
