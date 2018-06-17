@@ -1,4 +1,5 @@
-class Attack {
+import Explosion from './explosion';
+export default class Attack {
   constructor() {
   }
 

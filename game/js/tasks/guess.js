@@ -1,4 +1,4 @@
-class GuessWord {
+export default class GuessWord {
 	constructor(){}
 	buildGuessWord() {
 		let mainAppend = document.getElementById('game');

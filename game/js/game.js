@@ -1,3 +1,5 @@
+import Enemy from './enemy';
+import Skills from './skills';
 export default class Game {
   constructor() {}
   startGame() {

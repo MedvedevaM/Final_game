@@ -1,3 +1,4 @@
+import Rating from './rating';
 export default class Registration {
   constructor() {
     this.name;

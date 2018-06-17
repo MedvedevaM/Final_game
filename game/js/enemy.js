@@ -1,4 +1,4 @@
-class Enemy {
+export default class Enemy {
   constructor() {
     this.adjectives  = ['Imbecile', 'Vile', 'Fastidious', 'Deadly', 'Sullen', 'Vicious', 'Awful', 'Snotty', 'Smelly', 'Foul', 'Dangerous', 'Terrible', 'Sniffling'];
     this.nouns  = ['org', 'troll', 'hooligan', 'bully', 'dwarf', 'goblin', 'bugbear', 'freak', 'monster', 'sultry', 'ghoul'];

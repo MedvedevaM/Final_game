@@ -1,4 +1,4 @@
-class TranslateTask {
+export default class TranslateTask {
   constructor(){}
   createTranslation() {
     let mainAppend = document.getElementById('game');

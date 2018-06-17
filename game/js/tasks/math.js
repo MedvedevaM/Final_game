@@ -1,4 +1,4 @@
-class MathTask {
+export default class MathTask {
   constructor(){}
   buildMathTask() {
     let maxNum = 12,

@@ -1,4 +1,4 @@
-class TranslateNumber {
+export default class TranslateNumber {
   constructor(){}
   buildTranslateNumber() {
     let mainAppend = document.getElementById('game');

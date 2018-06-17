@@ -1,4 +1,4 @@
-class DragNDropTask {
+export default class DragNDropTask {
   constructor() {
     this.word = vocabulary[Math.floor(Math.random()*(vocabulary.length))].word;
   }

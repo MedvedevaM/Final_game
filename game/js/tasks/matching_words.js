@@ -1,4 +1,4 @@
-class MatchingWords {
+export default class MatchingWords {
   constructor() {
     this.words = [];
     this.translates = [];

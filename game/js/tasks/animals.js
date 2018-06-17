@@ -1,4 +1,4 @@
-class AnimalTask {
+export default class AnimalTask {
   constructor() {}
   createAnimalTask() {
     let globalWrap = document.createElement('div');

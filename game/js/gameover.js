@@ -1,4 +1,6 @@
-class GameOver {
+import Rating from './rating';
+import Registration from './registation';
+export default class GameOver {
   constructor() {
   }
   init() {
